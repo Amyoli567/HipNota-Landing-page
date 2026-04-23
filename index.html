@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HipNota – YouTube Video Summarizer | Instant AI Notes</title>
+  <meta name="description" content="HipNota is the #1 AI YouTube Video Summarizer. Paste any YouTube link and get instant summaries, key insights, and notes. Save hours of watching and learn faster with our video summary tool.">
+  <meta name="keywords" content="YouTube video summarizer, AI video summary tool, summarize YouTube videos, generate notes from videos, video key ideas, learn faster, YouTube notes online, HipNota">
+  <meta name="author" content="HipNota">
+  <style>
+    body {
+      margin:0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:#0f172a;
+      color:#e5e7eb;
+      line-height:1.6;
+    }
+    header nav {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:20px 50px;
+      background:#0f172a;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    header nav a {
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      transition:0.3s;
+    }
+    header nav a:hover {
+      color:#4cff9f;
+    }
+    .hero {
+      text-align:center;
+      padding:100px 20px;
+      background:linear-gradient(145deg,#0f172a,#1e293b);
+    }
+    .hero h1 {
+      font-size:2.8rem;
+      color:#4cff9f;
+      margin-bottom:20px;
+    }
+    .hero p {
+      font-size:1.2rem;
+      max-width:700px;
+      margin:0 auto 30px;
+    }
+    .btn {
+      padding:15px 30px;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:1rem;
+      margin:10px;
+      transition:all 0.3s;
+    }
+    .btn-primary {
+      background:#4cff9f;
+      color:#0f172a;
+      font-weight:bold;
+    }
+    .btn-primary:hover {
+      background:#3be68a;
+      transform:scale(1.05);
+    }
+    .btn-secondary {
+      background:#1f2937;
+      color:white;
+      border:1px solid #4cff9f;
+    }
+    .btn-secondary:hover {
+      background:#4cff9f;
+      color:#0f172a;
+    }
+    section {
+      padding:80px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+    h2 {
+      text-align:center;
+      color:#4cff9f;
+      margin-bottom:40px;
+    }
+    /* Steps */
+    .steps {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+      text-align:center;
+    }
+    .steps div {
+      background:#1f2937;
+      padding:40px 25px;
+      border-radius:15px;
+      transition:0.3s;
+    }
+    .steps div:hover {
+      transform:translateY(-8px);
+      background:#243447;
+    }
+    .steps span {
+      font-size:3rem;
+      display:block;
+      margin-bottom:15px;
+    }
+    /* Pricing */
+    .pricing {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      margin-top:40px;
+    }
+    .plan {
+      background:#1f2937;
+      padding:30px;
+      border-radius:20px;
+      transition: all 0.5s ease;
+      position:relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border: 2px solid transparent;
+    }
+    .plan:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(0,255,150,0.3);
+      border: 2px solid #4cff9f;
+    }
+    .plan h3 {
+      color:#4cff9f;
+    }
+    .plan ul {
+      list-style:none;
+      padding:0;
+      margin:20px 0;
+    }
+    .plan ul li {
+      margin:10px 0;
+    }
+    .plan ul li::before {
+      content: "•";
+      color: #4cff9f;
+      display: inline-block;
+      width: 20px;
+      animation: bounce 1.2s infinite;
+      margin-right:8px;
+    }
+    .plan ul li:nth-child(2)::before { animation-delay: 0.2s; }
+    .plan ul li:nth-child(3)::before { animation-delay: 0.4s; }
+    .plan ul li:nth-child(4)::before { animation-delay: 0.6s; }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    footer {
+      background:#0f172a;
+      text-align:center;
+      padding:40px;
+      margin-top:50px;
+      font-size:0.9rem;
+      color:#9ca3af;
+    }
+    /* Responsive */
+    @media(max-width:768px) {
+      .hero h1 { font-size:2rem; }
+      header nav { padding:15px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="./assets/hipnota-logo.png" alt="HipNota Logo – YouTube Video Summarizer" style="height:40px;width:auto;">
+        <h2 style="color:#4cff9f;font-size:24px;font-weight:700;">HipNota</h2>
+      </div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;">
+        <a href="#how">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#beta">Beta</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>👉 HipNota: The Best YouTube Video Summarizer</h1>
+    <p>Paste any YouTube link → Receive instant AI-powered summaries, concise notes, and actionable insights. Save hours of watching and learn faster with our smart video summary tool.</p>
+    <button class="btn btn-primary" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'});">🔵 Try Free Now</button>
+    <button class="btn btn-secondary">⚪ Join Beta Waitlist</button>
+  </section>
+
+  <!-- Featured Snippet Target -->
+<section style="display:none" aria-hidden="true">
+  <h1>What is the best YouTube video summarizer?</h1>
+  <p>The best YouTube video summarizer is HipNota, an AI-powered tool that instantly converts YouTube videos into concise summaries, notes, and key ideas, helping users save time and learn faster.</p>
+</section>
+
+  <!-- How It Works -->
+  <section id="how">
+    <h2>How HipNota Works</h2>
+    <div class="steps">
+      <div>
+        <span role="img" aria-label="Paste YouTube link">📋</span>
+        <h3>Step 1: Paste</h3>
+        <p>Insert any YouTube video link. HipNota instantly identifies the content and prepares it for summarization.</p>
+      </div>
+      <div>
+        <span role="img" aria-label="Ask AI">✍️</span>
+        <h3>Step 2: Ask</h3>
+        <p>Specify what you want: short notes, key insights, or detailed summaries. Our AI adapts to your preferences for precise results.</p>
+      </div>
+      <div>
+        <span role="img" aria-label="Summary output">⚡</span>
+        <h3>Step 3: Summary</h3>
+        <p>Get a clean, concise AI summary in seconds — perfect for studying, productivity, or work research.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing">
+    <h2>Choose Your Plan</h2>
+    <div class="pricing">
+      <div class="plan">
+        <h3>Free (Beta)</h3>
+        <ul>
+          <li>3 YouTube summaries/week</li>
+          <li>Basic text format</li>
+          <li>Community support</li>
+        </ul>
+        <form name="waitlist" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="waitlist">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-secondary">Start Free</button>
+        </form>
+      </div>
+
+      <div class="plan">
+        <h3>Starter ($9/mo)</h3>
+        <ul>
+          <li>20 video summaries/month</li>
+          <li>Priority turnaround</li>
+          <li>Structured, organized notes format</li>
+        </ul>
+        <button class="btn btn-primary">Upgrade to Starter</button>
+      </div>
+
+      <div class="plan">
+        <h3>Pro ($19/mo) – Coming Soon 🚀</h3>
+        <ul>
+          <li>50 summaries/month</li>
+          <li>Export to PDF & Notion</li>
+          <li>Faster AI delivery</li>
+          <li>Request custom features</li>
+        </ul>
+        <button class="btn btn-secondary" disabled>Join Waitlist</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beta Notice -->
+  <section id="beta">
+    <h2>⚡ Beta Notice</h2>
+    <p style="max-width:800px;margin:auto;text-align:center;">
+      HipNota is currently in Beta 🚀 <br>
+      You’re among the first to try our AI video summary generator. <br>
+      Turnaround times may vary (manual delivery). <br>
+      Features are limited for now — your feedback shapes the future. <br><br>
+      💡 Thanks for being part of the journey!
+    </p>
+  </section>
+
+  <!-- Social Proof -->
+  <section>
+    <h2>What Early Users Say</h2>
+    <p style="text-align:center;">“500+ YouTube videos summarized in testing”</p>
+    <p style="text-align:center;">“HipNota saved me hours of watching!”</p>
+  </section>
+
+  <!-- Final CTA -->
+  <section style="text-align:center;">
+    <h2>👉 Stop wasting time. Start learning faster with HipNota.</h2>
+    <button class="btn btn-primary">Get Started Free</button>
+  </section>
+
+  <footer>
+    © 2026 HipNota. The #1 YouTube Video Summarizer. All Rights Reserved.
+  </footer>
+
+<!-- SEO FAQ SECTION (Hidden, for Google only) -->
+<section style="display:none" aria-hidden="true">
+  <h2>Frequently Asked Questions About HipNota</h2>
+
+  <h3>What is HipNota?</h3>
+  <p>HipNota is an AI-powered YouTube video summarizer that turns long videos into short summaries, notes, and key insights in seconds.</p>
+
+  <h3>How does HipNota summarize YouTube videos?</h3>
+  <p>HipNota uses artificial intelligence to analyze video transcripts and extract the most important ideas, saving users time and improving learning efficiency.</p>
+
+  <h3>Is HipNota free to use?</h3>
+  <p>HipNota offers a free beta plan with limited summaries, with paid plans available for higher usage and advanced features.</p>
+
+  <h3>Who should use a YouTube video summarizer?</h3>
+  <p>Students, professionals, creators, and lifelong learners who want faster understanding without watching entire videos benefit most from a video summarizer.</p>
+
+  <h3>Can I use HipNota for studying?</h3>
+  <p>Yes. HipNota is ideal for studying, revision, research, and productivity by turning videos into structured notes.</p>
+</section>
+
+</body>
+</html>
